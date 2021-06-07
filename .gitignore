@@ -10,11 +10,72 @@ debian/ubuntu-keyboard-tests/
 *.substvars
 *.o
 *.a
-*.so*
-tests/editor/editor
-tests/language-layout-loading/language-layout-loading
-tests/language-layout-switching/language-layout-switching
-tests/preedit-string/preedit-string
-tests/repeat-backspace/repeat-backspace
-tests/unittests/libdummy.so.1*
-tests/word-candidates/word-candidates
+*.la
+*.lai
+*.so
+*.so.*
+*.dll
+*.dylib
+
+# Qt-es
+object_script.*.Release
+object_script.*.Debug
+*_plugin_import.cpp
+/.qmake.cache
+/.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+Makefile*
+*build-*
+*.qm
+*.prl
+
+# Qt unit tests
+target_wrapper.*
+
+# QtCreator
+*.autosave
+
+# QtCreator Qml
+*.qmlproject.user
+*.qmlproject.user.*
+
+# QtCreator CMake
+CMakeLists.txt.user*
+
+# QtCreator 4.8< compilation database 
+compile_commands.json
+
+# QtCreator local machine specific files for imported projects
+*creator.user*
+
+*_qmlcache.qrc
+
+# autopilot
+tests/autopilot/build/
+
+# misc
+*.egg-info
+*.user
+*.deb
+*.log
+*.mo
+*.tar
+create_repository.sh
+
+# debian
+debian/tmp
+debian/ubuntu-keyboard-data
+debian/ubuntu-keyboard-dev
+debian/ubuntu-keyboard-tests
+debian/ubuntu-keyboard
+tests/unittests
