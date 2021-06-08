@@ -74,8 +74,7 @@ create_repository.sh
 
 # debian
 debian/tmp
-debian/ubuntu-keyboard-data
-debian/ubuntu-keyboard-dev
-debian/ubuntu-keyboard-tests
-debian/ubuntu-keyboard
+debian/ubuntu-keyboard-*
+debian/qtdeclarative5-*
+!debian/*.install
 tests/unittests
