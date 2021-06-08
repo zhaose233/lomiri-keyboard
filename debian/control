@@ -144,6 +144,7 @@ Description: Tests and emulators package for lomiri-keyboard
          ubuntu-keyboard-chinese-chewing (>= ${source:Version}),
          ubuntu-keyboard-chinese-pinyin (>= ${source:Version}),
          ubuntu-keyboard-chinese-cangjie (>= ${source:Version}),
+         ubuntu-keyboard-chinese-quick (>= ${source:Version}),
          ubuntu-keyboard-croatian (>= ${source:Version}),
          ubuntu-keyboard-czech (>= ${source:Version}),
          ubuntu-keyboard-danish (>= ${source:Version}),
@@ -285,6 +286,13 @@ Depends: ubuntu-keyboard (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
 Description: Ubuntu on-screen keyboard data files - Chinese Cangjie
+
+Package: ubuntu-keyboard-chinese-quick
+Architecture: any
+Depends: ubuntu-keyboard (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: Ubuntu on-screen keyboard data files - Chinese Quick
 
 Package: ubuntu-keyboard-croatian
 >>>>>>> 2a11eb3d (added Cangjie Keyboard)

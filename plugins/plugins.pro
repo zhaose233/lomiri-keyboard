@@ -50,6 +50,7 @@ SUBDIRS = \
     pinyin \
     chewing \
     cangjie \
+    quick \
 
 QMAKE_EXTRA_TARGETS += check
 check.target = check
