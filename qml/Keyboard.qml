@@ -210,7 +210,7 @@ Item {
                     PropertyChanges { target: keyboardSurface; width: keyboardSurface.oneHandedWidth; y: keyboardSurface.fixedY; x: 0 }
 
                     // Action bar
-                    PropertyChanges { target: actionBar; visible: true; x: keyboardSurface.width - width }
+                    PropertyChanges { target: actionBar; visible: true; x: keyboardSurface.width - width; alignment: Qt.AlignRight; }
                     PropertyChanges { target: keyboardComp; anchors.rightMargin: actionBar.width; anchors.leftMargin: 0 }
                     PropertyChanges { target: cursorSwipeArea; anchors.rightMargin: actionBar.width; anchors.leftMargin: 0 }
 
@@ -227,7 +227,7 @@ Item {
                     PropertyChanges { target: keyboardSurface; width: keyboardSurface.oneHandedWidth; y: keyboardSurface.fixedY; x: canvas.width - width }
 
                     // Action bar
-                    PropertyChanges { target: actionBar; visible: true; x: 0 }
+                    PropertyChanges { target: actionBar; visible: true; x: 0; alignment: Qt.AlignLeft; }
                     PropertyChanges { target: keyboardComp; anchors.rightMargin: 0; anchors.leftMargin: actionBar.width }
                     PropertyChanges { target: cursorSwipeArea; anchors.rightMargin: 0; anchors.leftMargin: actionBar.width }
 
@@ -244,7 +244,12 @@ Item {
                     PropertyChanges { target: keyboardSurface; width: keyboardSurface.oneHandedWidth; y: keyboardSurface.floatBottomY; x: keyboardSurface.floatInitialX; noActivity: false }
 
                     // Action bar
-                    PropertyChanges { target: actionBar; visible: true; x: keyboardSurface.positionedToLeft ? keyboardSurface.width - width : 0 }
+                    PropertyChanges {
+                        target: actionBar;
+                        visible: true;
+                        x: keyboardSurface.positionedToLeft ? keyboardSurface.width - width : 0;
+                        alignment: keyboardSurface.positionedToLeft ? Qt.AlignRight : Qt.AlignLeft;
+                    }
                     PropertyChanges {
                         target: keyboardComp;
                         anchors.rightMargin: keyboardSurface.positionedToLeft ? actionBar.width : 0;
@@ -415,6 +420,9 @@ Item {
             Rectangle {
                 id: actionBar
 
+                property int alignment
+                property real buttonWidth: width * 0.8
+
                 color: fullScreenItem.theme.backgroundColor
                 width: units.gu(UI.actionBarWidth)
                 z: 2
@@ -437,7 +445,7 @@ Item {
 
                         Layout.fillWidth: true
                         Layout.preferredHeight: width
-                        Layout.alignment: Qt.AlignTop
+                        Layout.alignment: Qt.AlignTop | actionBar.alignment
                         iconName: "grip-large"
 
                         drag.target: keyboardSurface
@@ -462,9 +470,10 @@ Item {
                     }
 
                     BarActionButton {
-                        Layout.fillWidth: true
+                        Layout.preferredWidth: actionBar.buttonWidth
                         Layout.fillHeight: true
                         Layout.preferredHeight: width
+                        Layout.alignment: actionBar.alignment
                         iconName: "go-last"
                         visible: keyboardSurface.state == "ONE-HANDED-LEFT" 
                                     || (fullScreenItem.keyboardFloating 
@@ -481,9 +490,10 @@ Item {
                     }
 
                     BarActionButton {
-                        Layout.fillWidth: true
+                        Layout.preferredWidth: actionBar.buttonWidth
                         Layout.fillHeight: true
                         Layout.preferredHeight: width
+                        Layout.alignment: actionBar.alignment
                         iconName: "go-first"
                         visible: keyboardSurface.state == "ONE-HANDED-RIGHT"
                                     || (fullScreenItem.keyboardFloating
@@ -500,9 +510,10 @@ Item {
                     }
 
                     BarActionButton {
-                        Layout.fillWidth: true
+                        Layout.preferredWidth: actionBar.buttonWidth
                         Layout.fillHeight: true
                         Layout.preferredHeight: width
+                        Layout.alignment: actionBar.alignment
                         iconName: "go-last"
                         iconRotation: 90
                         visible: fullScreenItem.keyboardFloating && keyboardSurface.y + keyboardSurface.height < canvas.height
@@ -513,9 +524,9 @@ Item {
                     }
 
                     BarActionButton {
-                        Layout.fillWidth: true
-                        Layout.alignment: Qt.AlignBottom
-                        Layout.preferredHeight: width * 1.2
+                        Layout.preferredWidth: actionBar.buttonWidth
+                        Layout.alignment: Qt.AlignBottom | actionBar.alignment
+                        Layout.preferredHeight: width
                         iconName: "view-fullscreen"
                         visible: keyboardSurface.state !== "FULL"
 
