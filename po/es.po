@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: ubuntu-keyboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-18 19:28+0000\n"
-"PO-Revision-Date: 2021-03-14 12:36+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-10-04 12:20+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/ubports/"
-"keyboard-component/es/>\n"
+"lomiri-keyboard/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,7 +58,7 @@ msgstr "Deslice para mover el cursor"
 
 #: ../qml/Keyboard.qml:352
 msgid "Double-tap to enter selection mode"
-msgstr "Toca dos veces en el texto para acceder al modo de selección"
+msgstr "Toque dos veces para entrar en el modo de selección"
 
 #: ../qml/keys/LanguageMenu.qml:106
 msgid "Settings"
@@ -98,7 +98,7 @@ msgstr "Alemán"
 
 #: ../qml/keys/languages.js:27
 msgid "Emoji"
-msgstr "Emoji"
+msgstr "Emoyi"
 
 #: ../qml/keys/languages.js:28
 msgid "Greek"
@@ -134,7 +134,7 @@ msgid ""
 "(Swiss)"
 msgstr ""
 "Francés\n"
-"Suizo"
+"(suizo)"
 
 #: ../qml/keys/languages.js:36
 msgid "Scottish Gaelic"
