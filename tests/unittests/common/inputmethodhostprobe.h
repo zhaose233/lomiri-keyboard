@@ -103,6 +103,7 @@ public:
     void setSelection(int, int) {}
     void setOrientationAngleLocked(bool) {}
     QList<MImPluginDescription> pluginDescriptions(Maliit::HandlerState) const {return QList<MImPluginDescription>();}
+    QVariant inputMethodQuery(Qt::InputMethodQuery, const QVariant&) const override { return QVariant(); }
     Maliit::Plugins::AbstractPluginSetting* registerPluginSetting(const QString &,
                                                                   const QString &,
                                                                   Maliit::SettingEntryType ,
