@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: ubuntu-keyboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-18 19:28+0000\n"
-"PO-Revision-Date: 2021-03-17 10:43+0000\n"
-"Last-Translator: David Farkas <dvdfrks@gmail.com>\n"
+"PO-Revision-Date: 2022-02-06 00:18+0000\n"
+"Last-Translator: Lundrin <berenyi.vilmos@tutanota.com>\n"
 "Language-Team: Hungarian <https://translate.ubports.com/projects/ubports/"
-"keyboard-component/hu/>\n"
+"lomiri-keyboard/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,15 +26,15 @@ msgstr "Összes kijelölése"
 
 #: ../qml/ActionsToolbar.qml:57
 msgid "Redo"
-msgstr ""
+msgstr "Újra"
 
 #: ../qml/ActionsToolbar.qml:58
 msgid "Undo"
-msgstr ""
+msgstr "Visszavonás"
 
 #: ../qml/ActionsToolbar.qml:73
 msgid "Paste"
-msgstr ""
+msgstr "Beillesztés"
 
 #: ../qml/ActionsToolbar.qml:74
 msgid "Copy"
@@ -42,7 +42,7 @@ msgstr "Másolás"
 
 #: ../qml/ActionsToolbar.qml:75
 msgid "Cut"
-msgstr ""
+msgstr "Kivágás"
 
 #: ../qml/FloatingActions.qml:62
 msgid "Done"
@@ -50,15 +50,15 @@ msgstr "Kész"
 
 #: ../qml/Keyboard.qml:351
 msgid "Swipe to move selection"
-msgstr ""
+msgstr "Csúsztasson a kijelölés mozgatásához"
 
 #: ../qml/Keyboard.qml:352
 msgid "Swipe to move cursor"
-msgstr ""
+msgstr "Csúsztasson a kurzor mozgatásához"
 
 #: ../qml/Keyboard.qml:352
 msgid "Double-tap to enter selection mode"
-msgstr ""
+msgstr "Dupla-érintés a kijelölő módhoz"
 
 #: ../qml/keys/LanguageMenu.qml:106
 msgid "Settings"
@@ -73,10 +73,8 @@ msgid "Azerbaijani"
 msgstr "azerbajdzsáni"
 
 #: ../qml/keys/languages.js:21
-#, fuzzy
-#| msgid "Hungarian"
 msgid "Bulgarian"
-msgstr "magyar"
+msgstr "Bolgár"
 
 #: ../qml/keys/languages.js:22
 msgid "Bosnian"
@@ -112,7 +110,7 @@ msgstr "angol"
 
 #: ../qml/keys/languages.js:30
 msgid "Esperanto"
-msgstr ""
+msgstr "Eszperantó"
 
 #: ../qml/keys/languages.js:31
 msgid "Spanish"
@@ -120,7 +118,7 @@ msgstr "spanyol"
 
 #: ../qml/keys/languages.js:32
 msgid "Persian"
-msgstr ""
+msgstr "Perzsa"
 
 #: ../qml/keys/languages.js:33
 msgid "Finnish"
@@ -131,12 +129,12 @@ msgid "French"
 msgstr "francia"
 
 #: ../qml/keys/languages.js:35
-#, fuzzy
-#| msgid "French"
 msgid ""
 "French\n"
 "(Swiss)"
-msgstr "francia"
+msgstr ""
+"Francia\n"
+"(Svájci)"
 
 #: ../qml/keys/languages.js:36
 msgid "Scottish Gaelic"
@@ -168,7 +166,7 @@ msgstr "japán"
 
 #: ../qml/keys/languages.js:43
 msgid "Lithuanian"
-msgstr ""
+msgstr "Litván"
 
 #: ../qml/keys/languages.js:44
 msgid "Latvian"
@@ -176,7 +174,7 @@ msgstr "lett"
 
 #: ../qml/keys/languages.js:45
 msgid "Korean"
-msgstr ""
+msgstr "Koreai"
 
 #: ../qml/keys/languages.js:46
 msgid "Dutch"
@@ -216,7 +214,7 @@ msgstr "svéd"
 
 #: ../qml/keys/languages.js:55
 msgid "Turkish"
-msgstr ""
+msgstr "Török"
 
 #: ../qml/keys/languages.js:56
 msgid "Ukrainian"
