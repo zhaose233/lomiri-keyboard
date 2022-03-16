@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-keyboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-18 19:28+0000\n"
-"PO-Revision-Date: 2022-03-14 13:38+0000\n"
+"PO-Revision-Date: 2022-03-16 13:12+0000\n"
 "Last-Translator: ប៉ុកណូ រ៉ូយ៉ាល់ <poknoroyal@outlook.com>\n"
 "Language-Team: Central Khmer <https://translate.ubports.com/projects/ubports/"
 "lomiri-keyboard/km/>\n"
@@ -26,11 +26,11 @@ msgstr "ជ្រើសទាំងអស់"
 
 #: ../qml/ActionsToolbar.qml:57
 msgid "Redo"
-msgstr ""
+msgstr "ធ្វើវិញ"
 
 #: ../qml/ActionsToolbar.qml:58
 msgid "Undo"
-msgstr ""
+msgstr "មិនធ្វើវិញ"
 
 #: ../qml/ActionsToolbar.qml:73
 msgid "Paste"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../qml/FloatingActions.qml:62
 msgid "Done"
-msgstr ""
+msgstr "រូចរាល់"
 
 #: ../qml/Keyboard.qml:351
 msgid "Swipe to move selection"
