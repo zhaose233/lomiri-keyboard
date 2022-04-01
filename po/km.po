@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-keyboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-18 19:28+0000\n"
-"PO-Revision-Date: 2022-03-16 13:41+0000\n"
+"PO-Revision-Date: 2022-04-01 08:29+0000\n"
 "Last-Translator: ប៉ុកណូ រ៉ូយ៉ាល់ <poknoroyal@outlook.com>\n"
 "Language-Team: Central Khmer <https://translate.ubports.com/projects/ubports/"
 "lomiri-keyboard/km/>\n"
@@ -42,7 +42,7 @@ msgstr "ចម្លង"
 
 #: ../qml/ActionsToolbar.qml:75
 msgid "Cut"
-msgstr ""
+msgstr "កាត់"
 
 #: ../qml/FloatingActions.qml:62
 msgid "Done"
@@ -50,15 +50,15 @@ msgstr "រូចរាល់"
 
 #: ../qml/Keyboard.qml:351
 msgid "Swipe to move selection"
-msgstr ""
+msgstr "អូស ដើម្បីផ្លាស់ទីជម្រើស"
 
 #: ../qml/Keyboard.qml:352
 msgid "Swipe to move cursor"
-msgstr ""
+msgstr "អូស ដើម្បីផ្លាស់ទីទ្រនិច"
 
 #: ../qml/Keyboard.qml:352
 msgid "Double-tap to enter selection mode"
-msgstr ""
+msgstr "ទ្វេប៉ះ ដើម្បីបញ្ជូលម៉ូដជម្រើស"
 
 #: ../qml/keys/LanguageMenu.qml:106
 msgid "Settings"
@@ -73,10 +73,8 @@ msgid "Azerbaijani"
 msgstr "អាហ្ស៊ែរបែហ្ស៊ង់"
 
 #: ../qml/keys/languages.js:21
-#, fuzzy
-#| msgid "Hungarian"
 msgid "Bulgarian"
-msgstr "ហុងគ្រី"
+msgstr "ប៊ុលការី"
 
 #: ../qml/keys/languages.js:22
 msgid "Bosnian"
@@ -112,7 +110,7 @@ msgstr "អង់គ្លេស"
 
 #: ../qml/keys/languages.js:30
 msgid "Esperanto"
-msgstr ""
+msgstr "អេស្ពែរង់តូ"
 
 #: ../qml/keys/languages.js:31
 msgid "Spanish"
@@ -120,7 +118,7 @@ msgstr "​អេស៉្បាញ"
 
 #: ../qml/keys/languages.js:32
 msgid "Persian"
-msgstr ""
+msgstr "ពែរ្ស"
 
 #: ../qml/keys/languages.js:33
 msgid "Finnish"
@@ -131,12 +129,12 @@ msgid "French"
 msgstr "បារាំង"
 
 #: ../qml/keys/languages.js:35
-#, fuzzy
-#| msgid "French"
 msgid ""
 "French\n"
 "(Swiss)"
-msgstr "បារាំង"
+msgstr ""
+"បារាំង\n"
+"(ស្វីស)"
 
 #: ../qml/keys/languages.js:36
 msgid "Scottish Gaelic"
@@ -164,19 +162,19 @@ msgstr "អ៊ីតាលី"
 
 #: ../qml/keys/languages.js:42
 msgid "Japanese"
-msgstr ""
+msgstr "ជប៉ុន"
 
 #: ../qml/keys/languages.js:43
 msgid "Lithuanian"
-msgstr ""
+msgstr "លីទុយអានី"
 
 #: ../qml/keys/languages.js:44
 msgid "Latvian"
-msgstr ""
+msgstr "ឡេតូនី"
 
 #: ../qml/keys/languages.js:45
 msgid "Korean"
-msgstr ""
+msgstr "កូរ៉េ"
 
 #: ../qml/keys/languages.js:46
 msgid "Dutch"
@@ -216,7 +214,7 @@ msgstr "ស៊ុយអែដ"
 
 #: ../qml/keys/languages.js:55
 msgid "Turkish"
-msgstr ""
+msgstr "តួកគី"
 
 #: ../qml/keys/languages.js:56
 msgid "Ukrainian"
@@ -227,12 +225,16 @@ msgid ""
 "Chinese\n"
 "(Pinyin)"
 msgstr ""
+"ចិន\n"
+"(ភីនអ៊ីន)"
 
 #: ../qml/keys/languages.js:58
 msgid ""
 "Chinese\n"
 "(Chewing)"
 msgstr ""
+"ចិន\n"
+"(ឈីវីង)"
 
 #~ msgid "Chinese - Pinyin"
 #~ msgstr "ចិន - Pinyin"
