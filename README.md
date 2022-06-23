@@ -14,7 +14,7 @@ After building the keyboard (such as with `dpkg-buildpackage -us -uc`), run `mak
 
 To test a pull request on your device, type
 
-    sudo ubports-qa install keyboard-component X
+    sudo ubports-qa install lomiri-keyboard X
 
 where `X` is the code of a merge request to this repository.
 
