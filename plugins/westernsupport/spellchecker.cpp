@@ -251,7 +251,12 @@ void SpellChecker::addToUserWordList(const QString &word)
     QDir::home().mkpath(QFileInfo(user_dictionary).absolutePath());
     if (user_dictionary.open(QFile::Append)) {
         QTextStream stream(&user_dictionary);
-        stream << word << endl;
+        stream << word
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
+         << endl;
+#else
+         << Qt::endl;
+#endif
     }
 
     updateWord(word);

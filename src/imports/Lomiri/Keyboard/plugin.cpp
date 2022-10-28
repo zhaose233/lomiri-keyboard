@@ -38,7 +38,11 @@ namespace Keyboard {
 void InputMethodExtensionPlugin::registerTypes(const char *uri)
 {
     // @uri Lomiri.Keyboard
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     qmlRegisterType<InputMethodExtension>();
+#else
+    qmlRegisterAnonymousType<InputMethodExtension>(uri, 0);
+#endif
     qmlRegisterType<InputMethod>(uri, 0, 1, "InputMethod");
 }
 
