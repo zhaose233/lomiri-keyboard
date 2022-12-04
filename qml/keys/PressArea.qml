@@ -142,7 +142,7 @@ MultiPointTouchArea {
         // or further away from its start than the height of the whole keyboard.
         // This works around touches sometimes being recognized as ending below
         // the bottom of the screen.
-        if (point.y > panel.height) {
+        if (!fullScreenItem.keyboardFloating && point.y > panel.height) {
             console.warn("Touch point released past height of keyboard. Ignoring.");
         } else if (!(point.y <= startY)) {
             // Handles swiping away the keyboard
