@@ -558,6 +558,9 @@ Item {
 
     // Autopilot needs to be able to move the cursor even when the layout
     // doesn't provide arrow keys (e.g. in phone mode)
+    function commitPreedit() {
+        event_handler.onKeyReleased("", "commit");
+    }
     function sendLeftKey() {
         event_handler.onKeyReleased("", "left");
     }
@@ -577,15 +580,19 @@ Item {
         event_handler.onKeyReleased("", "end");
     }
     function selectLeft() {
+        commitPreedit();
         event_handler.onKeyReleased("SelectPreviousChar", "keysequence");
     }
     function selectRight() {
+        commitPreedit();
         event_handler.onKeyReleased("SelectNextChar", "keysequence");
     }
     function selectUp() {
+        commitPreedit();
         event_handler.onKeyReleased("SelectPreviousLine", "keysequence");
     }
     function selectDown() {
+        commitPreedit();
         event_handler.onKeyReleased("SelectNextLine", "keysequence");
     }
     function selectWord() {
@@ -593,30 +600,40 @@ Item {
         event_handler.onKeyReleased("SelectNextWord", "keysequence");
     }
     function selectStartOfLine() {
+        commitPreedit();
         event_handler.onKeyReleased("SelectStartOfLine", "keysequence");
     }
     function selectEndOfLine() {
+        commitPreedit();
         event_handler.onKeyReleased("SelectEndOfLine", "keysequence");
     }
     function selectStartOfDocument() {
+        commitPreedit();
         event_handler.onKeyReleased("SelectStartOfDocument", "keysequence");
     }
     function selectEndOfDocument() {
+        commitPreedit();
         event_handler.onKeyReleased("SelectEndOfDocument", "keysequence");
     }
     function selectAll() {
+        commitPreedit();
         event_handler.onKeyReleased("SelectAll", "keysequence");
+        cursorSwipeArea.selectionMode = true
     }
     function moveToStartOfLine() {
+        commitPreedit();
         event_handler.onKeyReleased("MoveToStartOfLine", "keysequence");
     }
     function moveToEndOfLine() {
+        commitPreedit();
         event_handler.onKeyReleased("MoveToEndOfLine", "keysequence");
     }
     function moveToStartOfDocument() {
+        commitPreedit();
         event_handler.onKeyReleased("MoveToStartOfDocument", "keysequence");
     }
     function moveToEndOfDocument() {
+        commitPreedit();
         event_handler.onKeyReleased("MoveToEndOfDocument", "keysequence");
     }
     function redo() {
@@ -626,6 +643,7 @@ Item {
         event_handler.onKeyReleased("Undo", "keysequence");
     }
     function paste() {
+        commitPreedit();
         event_handler.onKeyReleased("Paste", "keysequence");
     }
     function copy() {
