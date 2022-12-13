@@ -39,8 +39,7 @@ dconf dump $DCONF_SOURCE_DIR | dconf load $DCONF_TARGET_DIR
 # the hard-coded path to the moved file. Check it here and fix it up if required.
 KEY_PRESS_FEEDBACK_SOUND=$(gsettings get com.lomiri.keyboard.maliit key-press-feedback-sound)
 if [[ "$KEY_PRESS_FEEDBACK_SOUND" =~ ^/usr/share/maliit/plugins/com/ubuntu ]]; then
-    KEY_PRESS_FEEDBACK_SOUND=$(echo "${KEY_PRESS_FEEDBACK_SOUND}"| \
-            sed -e 's:com/ubuntu/styles/ubuntu/:lomiri-keyboard/styles/lomiri/')
+    KEY_PRESS_FEEDBACK_SOUND=${KEY_PRESS_FEEDBACK_SOUND/"com/ubuntu/styles/ubuntu/"/"lomiri-keyboard/styles/lomiri/"}
     gsettings set com.lomiri.keyboard.maliit key-press-feedback-sound "$KEY_PRESS_FEEDBACK_SOUND"
 fi
 
