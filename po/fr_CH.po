@@ -8,20 +8,21 @@ msgstr ""
 "Project-Id-Version: lomiri-keyboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-18 19:28+0000\n"
-"PO-Revision-Date: 2020-12-30 10:26+0000\n"
-"Last-Translator: Daniel Sparti <daniel.sparti@posteo.net>\n"
-"Language-Team: French (Switzerland) <https://translate.ubports.com/projects/"
-"ubports/keyboard-component/fr_CH/>\n"
+"PO-Revision-Date: 2023-01-05 10:42+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: French (Switzerland) <https://hosted.weblate.org/projects/"
+"lomiri/lomiri-keyboard/fr_CH/>\n"
 "Language: fr_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: ../qml/ActionsToolbar.qml:56
+#, fuzzy
 msgid "Select All"
-msgstr "Sélectionner tout"
+msgstr "Select All"
 
 #: ../qml/ActionsToolbar.qml:57
 msgid "Redo"
@@ -36,8 +37,9 @@ msgid "Paste"
 msgstr "Coller"
 
 #: ../qml/ActionsToolbar.qml:74
+#, fuzzy
 msgid "Copy"
-msgstr "Copier"
+msgstr "Copy"
 
 #: ../qml/ActionsToolbar.qml:75
 msgid "Cut"
