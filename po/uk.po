@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-keyboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-18 19:28+0000\n"
-"PO-Revision-Date: 2023-01-11 15:55+0000\n"
+"PO-Revision-Date: 2023-01-15 17:47+0000\n"
 "Last-Translator: Dan <denqwerta@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-keyboard/uk/>\n"
@@ -63,7 +63,7 @@ msgstr "Двічі торкніться, щоб увійти в режим ви�
 
 #: ../qml/keys/LanguageMenu.qml:106
 msgid "Settings"
-msgstr "Параметри"
+msgstr "Налаштування"
 
 #: ../qml/keys/languages.js:19
 msgid "Arabic"
