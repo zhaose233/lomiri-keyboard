@@ -8,7 +8,10 @@ export PKG_CONFIG_PATH=/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig
 endif
 
 %:
-	dh $@ --fail-missing --with python3,migrations --parallel
+	dh $@ --with python3,migrations
+
+override_dh_missing:
+	dh_missing -X'*.pyc' --fail-missing
 
 override_dh_auto_configure:
 	dh_auto_configure -- -recursive \
@@ -40,4 +43,4 @@ override_dh_install:
 	cd $(CURDIR)
 	# Don't install the other tests
 	rm debian/tmp/usr/bin/ut_*
-	dh_install -X'*.pyc' --fail-missing
+	dh_install
