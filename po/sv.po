@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-keyboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-18 19:28+0000\n"
-"PO-Revision-Date: 2023-02-15 10:39+0000\n"
+"PO-Revision-Date: 2023-02-27 18:35+0000\n"
 "Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-keyboard/sv/>\n"
@@ -26,19 +26,19 @@ msgstr "Välj alla"
 
 #: ../qml/ActionsToolbar.qml:57
 msgid "Redo"
-msgstr ""
+msgstr "Gör om"
 
 #: ../qml/ActionsToolbar.qml:58
 msgid "Undo"
-msgstr ""
+msgstr "Ångra"
 
 #: ../qml/ActionsToolbar.qml:73
 msgid "Paste"
-msgstr ""
+msgstr "Klistra in"
 
 #: ../qml/ActionsToolbar.qml:74
 msgid "Copy"
-msgstr ""
+msgstr "Kopiera"
 
 #: ../qml/ActionsToolbar.qml:75
 msgid "Cut"
@@ -46,15 +46,15 @@ msgstr "Klipp ut"
 
 #: ../qml/FloatingActions.qml:62
 msgid "Done"
-msgstr ""
+msgstr "Klart"
 
 #: ../qml/Keyboard.qml:351
 msgid "Swipe to move selection"
-msgstr ""
+msgstr "Svep för att flytta val"
 
 #: ../qml/Keyboard.qml:352
 msgid "Swipe to move cursor"
-msgstr ""
+msgstr "Svep för att flytta pekare"
 
 #: ../qml/Keyboard.qml:352
 msgid "Double-tap to enter selection mode"
@@ -73,10 +73,8 @@ msgid "Azerbaijani"
 msgstr "Azerbajdzjanska"
 
 #: ../qml/keys/languages.js:21
-#, fuzzy
-#| msgid "Hungarian"
 msgid "Bulgarian"
-msgstr "Ungerska"
+msgstr "Bulgariska"
 
 #: ../qml/keys/languages.js:22
 msgid "Bosnian"
@@ -112,7 +110,7 @@ msgstr "Engelska"
 
 #: ../qml/keys/languages.js:30
 msgid "Esperanto"
-msgstr ""
+msgstr "Esperanto"
 
 #: ../qml/keys/languages.js:31
 msgid "Spanish"
@@ -120,7 +118,7 @@ msgstr "Spanska"
 
 #: ../qml/keys/languages.js:32
 msgid "Persian"
-msgstr ""
+msgstr "Persiska"
 
 #: ../qml/keys/languages.js:33
 msgid "Finnish"
@@ -131,12 +129,12 @@ msgid "French"
 msgstr "Franska"
 
 #: ../qml/keys/languages.js:35
-#, fuzzy
-#| msgid "French"
 msgid ""
 "French\n"
 "(Swiss)"
-msgstr "Franska"
+msgstr ""
+"Franska\n"
+"(Schweiz)"
 
 #: ../qml/keys/languages.js:36
 msgid "Scottish Gaelic"
@@ -168,15 +166,15 @@ msgstr "Japanska"
 
 #: ../qml/keys/languages.js:43
 msgid "Lithuanian"
-msgstr ""
+msgstr "Litauiska"
 
 #: ../qml/keys/languages.js:44
 msgid "Latvian"
-msgstr ""
+msgstr "Lettiska"
 
 #: ../qml/keys/languages.js:45
 msgid "Korean"
-msgstr ""
+msgstr "Koreanska"
 
 #: ../qml/keys/languages.js:46
 msgid "Dutch"
@@ -216,7 +214,7 @@ msgstr "Svenska"
 
 #: ../qml/keys/languages.js:55
 msgid "Turkish"
-msgstr ""
+msgstr "Turkiska"
 
 #: ../qml/keys/languages.js:56
 msgid "Ukrainian"
