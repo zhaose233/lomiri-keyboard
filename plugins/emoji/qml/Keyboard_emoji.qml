@@ -38,6 +38,17 @@ KeyPad {
         property var recentEmoji: []
         property var chars
         property var db
+        readonly property var categoryIcons: {
+            "Smileys & Emotion": "😀",
+            "People & Body": "👋", // not used for now, merged with above due to lack of space
+            "Animals & Nature": "🐶",
+            "Food & Drink": "🍏",
+            "Travel & Places": "🚗",
+            "Activities": "🎾",
+            "Objects": "💡",
+            "Symbols": "❤",
+            "Flags": "🌍",
+        }
 
         Component.onCompleted: {
             db = LocalStorage.openDatabaseSync("Emoji", "1.0", "Storage for emoji keyboard layout", 1000000);
@@ -50,7 +61,7 @@ KeyPad {
 
                     var rs = tx.executeSql('SELECT emoji FROM Recent ORDER BY time ASC');
                     for (var i = 0; i < rs.rows.length; i++) {
-                        recentEmoji.push(rs.rows.item(i).emoji);
+                        recentEmoji.unshift(rs.rows.item(i).emoji);
                     }
                     for (var i = 0; i < recentEmoji.length % (c1.numberOfRows - 1); i++) {
                         recentEmoji.push("");
@@ -145,6 +156,7 @@ KeyPad {
         property int oldWidth: 0
         property int positionBeforeInsertion: 0
         property bool startingPosition: true
+        property int groupPositionOffset: Math.floor(width / cellWidth / 2)
         anchors.top: parent.top
         anchors.bottom: categories.top
         anchors.left: parent.left
@@ -182,12 +194,21 @@ KeyPad {
                 visible: label != ""
                 label: emoji != null ? emoji.char : ""
                 shifted: label
+                extended: Emoji.variants[label]
+                extendedShifted: extended
+                annotationXOffset: units.gu(0.35)
+                annotationYOffset: -units.gu(0.15)
+                pressTimeout: 85
+                enabled: !c1.movingHorizontally
                 normalColor: fullScreenItem.theme.backgroundColor
                 borderColor: normalColor
                 pressedColor: fullScreenItem.theme.backgroundColor
-                fontSize: units.gu(2.5)
+                fontSize: units.gu(2.45)
                 onKeySent: {
                     internal.updateRecent(key);
+                }
+                onExtendedKeysShownChanged: {
+                    c1.interactive = !extendedKeysShown
                 }
             }
         }
@@ -202,9 +223,9 @@ KeyPad {
             }
         }
 
-     }
+    }
 
-     Row {
+    Row {
         id: categories
         anchors.bottom: parent.bottom
         anchors.left: parent.left
@@ -215,7 +236,7 @@ KeyPad {
 
         LanguageKey {
             id: languageMenuButton
-            label: "ABC"
+            label: "XYZ"
             shifted: label
             normalColor: fullScreenItem.theme.backgroundColor
             borderColor: normalColor
@@ -225,98 +246,42 @@ KeyPad {
         CategoryKey {
             id: recentCat
             label: "⏱"
-            highlight: (c1.midVisibleIndex < internal.recentEmoji.length && c1.midVisibleIndex > 0)
-                       || (c1.contentX == 0 && internal.recentEmoji.length > 0)
+            highlight: {
+                const isInRange = c1.midVisibleIndex < internal.recentEmoji.length && c1.midVisibleIndex > 0;
+                const isAtStartWithRecent = c1.contentX == 0 && internal.recentEmoji.length > 0;
+                return isInRange || isAtStartWithRecent;
+            }
             onPressed: {
-                if (maliit_input_method.useHapticFeedback)
+                if (maliit_input_method.useHapticFeedback) {
                     pressEffect.start();
+                }
                 internal.jumpTo(0);
             }
-        }           
- 
-        CategoryKey {
-            label: "😀"
-            highlight: (c1.midVisibleIndex >= internal.recentEmoji.length 
-                        && c1.midVisibleIndex < 540 + internal.recentEmoji.length
-                        && !recentCat.highlight)
-                       || c1.midVisibleIndex == -1
-            onPressed: {
-                if (maliit_input_method.useHapticFeedback)
-                    pressEffect.start();
-                internal.jumpTo(internal.recentEmoji.length);
-                if (internal.recentEmoji.length < internal.maxRecent) {
-                    c1.startingPosition = true;
+        }
+
+        Repeater {
+            model: Emoji.groups
+
+            CategoryKey {
+                property int start: modelData.start + c1.groupPositionOffset + internal.recentEmoji.length
+                property int end: start + modelData.count
+                label: internal.categoryIcons[modelData.name] || "?"
+                highlight: {
+                    const isInRange = c1.midVisibleIndex >= start && c1.midVisibleIndex < end && !recentCat.highlight;
+                    const fallbackForFirst = c1.midVisibleIndex === -1 && index === 0;
+                    return isInRange || fallbackForFirst;
                 }
-            }
-        }
+                onPressed: {
+                    if (maliit_input_method.useHapticFeedback) {
+                        pressEffect.start();
+                    }
 
-        CategoryKey {
-            label: "🐶"
-            highlight: c1.midVisibleIndex >= 540 + internal.recentEmoji.length && c1.midVisibleIndex < 701 + internal.recentEmoji.length
-            onPressed: {
-                if (maliit_input_method.useHapticFeedback)
-                    pressEffect.start();
-                internal.jumpTo(540 + internal.recentEmoji.length);
-            }
-        }
+                    internal.jumpTo(start);
 
-        CategoryKey {
-            label: "🍏"
-            highlight: c1.midVisibleIndex >= 701 + internal.recentEmoji.length && c1.midVisibleIndex < 786 + internal.recentEmoji.length
-            onPressed: {
-                if (maliit_input_method.useHapticFeedback)
-                    pressEffect.start();
-                internal.jumpTo(701 + internal.recentEmoji.length);
-            }
-        }
-
-        CategoryKey {
-            label: "🎾"
-            highlight: c1.midVisibleIndex >= 786 + internal.recentEmoji.length && c1.midVisibleIndex < 931 + internal.recentEmoji.length
-            onPressed: {
-                if (maliit_input_method.useHapticFeedback)
-                    pressEffect.start();
-                internal.jumpTo(786 + internal.recentEmoji.length);
-            }
-        }
-
-        CategoryKey {
-            label: "🚗"
-             highlight: c1.midVisibleIndex >= 931 + internal.recentEmoji.length && c1.midVisibleIndex < 1050 + internal.recentEmoji.length
-            onPressed: {
-                if (maliit_input_method.useHapticFeedback)
-                    pressEffect.start();
-                internal.jumpTo(931 + internal.recentEmoji.length);
-            }
-        }
-
-        CategoryKey {
-            label: "💡"
-            highlight: c1.midVisibleIndex >= 1050 + internal.recentEmoji.length && c1.midVisibleIndex < 1229 + internal.recentEmoji.length
-            onPressed: {
-                if (maliit_input_method.useHapticFeedback)
-                    pressEffect.start();
-                internal.jumpTo(1050 + internal.recentEmoji.length);
-            }
-        }
-
-        CategoryKey {
-            label: "❤"
-            highlight: c1.midVisibleIndex >= 1229 + internal.recentEmoji.length && c1.midVisibleIndex < 1512 + internal.recentEmoji.length
-            onPressed: {
-                if (maliit_input_method.useHapticFeedback)
-                    pressEffect.start();
-                internal.jumpTo(1229 + internal.recentEmoji.length);
-            }
-        }
-
-        CategoryKey {
-            label: "🌍"
-            highlight: c1.midVisibleIndex >= 1512 + internal.recentEmoji.length
-            onPressed: {
-                if (maliit_input_method.useHapticFeedback)
-                    pressEffect.start();
-                internal.jumpTo(1512 + internal.recentEmoji.length);
+                    if (index === 0 && internal.recentEmoji.length < internal.maxRecent) {
+                        c1.startingPosition = true;
+                    }
+                }
             }
         }
 
