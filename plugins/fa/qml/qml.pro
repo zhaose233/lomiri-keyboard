@@ -7,7 +7,7 @@ TARGET = dummy
 TEMPLATE = lib
 
 lang_fa.path = "$${LOMIRI_KEYBOARD_PLUGIN_DIR}/fa/"
-lang_fa.files = *.qml *.js
+lang_fa.files = *.qml *.js keys/
 
 INSTALLS += lang_fa
 

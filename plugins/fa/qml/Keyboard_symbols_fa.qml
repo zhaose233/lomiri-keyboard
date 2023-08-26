@@ -15,8 +15,8 @@
  */
 
 import QtQuick 2.4
-import "../../keys"
-import "../../keys/key_constants.js" as UI
+import keys 1.0
+import "keys/key_constants.js" as UI
 
 KeyPad {
     anchors.fill: parent

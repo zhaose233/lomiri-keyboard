@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import QtQml 2.4
 import QtQuick 2.4
 import keys 1.0
 
@@ -21,7 +22,7 @@ KeyPad {
     anchors.fill: parent
 
     content: c1
-    symbols: "lib/fa/Keyboard_symbols_fa.qml"
+    symbols: Qt.resolvedUrl("Keyboard_symbols_fa.qml")
 
     Column {
         id: c1
