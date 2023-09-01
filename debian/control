@@ -91,6 +91,8 @@ Depends: autopilot-qt5 (>= 1.4),
          lomiri-keyboard-arabic (>= ${source:Version}),
          lomiri-keyboard-azerbaijani (>= ${source:Version}),
          lomiri-keyboard-belarusian (>= ${source:Version}),
+	 lomiri-keyboard-bengali (>= ${source:Version}),
+         lomiri-keyboard-bengali-probhat (>= ${source:Version}),
          lomiri-keyboard-bosnian (>= ${source:Version}),
          lomiri-keyboard-catalan (>= ${source:Version}),
          lomiri-keyboard-chinese-chewing (>= ${source:Version}),
@@ -157,6 +159,24 @@ Depends: lomiri-keyboard (= ${binary:Version}),
          ${shlibs:Depends},
 Description: Lomiri on-screen keyboard data files - Belarusian
  Data files for the Lomiri virtual keyboard - Belarusian
+
+Package: lomiri-keyboard-bengali
+Architecture: any
+Depends: lomiri-keyboard (= ${binary:Version}),
+         hunspell-bn,
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: Lomiri on-screen keyboard data files - Bengali National Layout
+ Data files for the Lomiri virtual keyboard - Bengali National Layout
+ 
+Package: lomiri-keyboard-bengali-probhat
+Architecture: any
+Depends: lomiri-keyboard (= ${binary:Version}),
+         hunspell-bn,
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: Lomiri on-screen keyboard data files - Bengali Probhat Layout
+ Data files for the Lomiri virtual keyboard - Bengali Probhat Layout
 
 Package: lomiri-keyboard-bosnian
 Architecture: any
