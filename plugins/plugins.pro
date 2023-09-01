@@ -6,6 +6,8 @@ SUBDIRS = \
     az \
     be \
     bg \
+    bn \
+    bn-probhat \
     bs \
     ca \
     cs \
