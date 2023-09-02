@@ -22,9 +22,14 @@ EXAMPLE_FILES = georgianplugin.json
 # generate database for presage:
 PLUGIN_INSTALL_PATH = $${LOMIRI_KEYBOARD_PLUGIN_DIR}/ka/
 
+database_ka_install.files = $${PWD}/database_ka.db
+database_ka_install.path = $${PLUGIN_INSTALL_PATH}
+
 target.path = $${PLUGIN_INSTALL_PATH}
 
-INSTALLS += target
+INSTALLS += \
+          target \
+          database_ka_install
 
 OTHER_FILES += \
     georgianplugin.json \
