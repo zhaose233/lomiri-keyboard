@@ -49,6 +49,7 @@ SUBDIRS = \
     uk \
     pinyin \
     chewing \
+    ka
 
 QMAKE_EXTRA_TARGETS += check
 check.target = check

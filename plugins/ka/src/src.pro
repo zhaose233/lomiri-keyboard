@@ -20,7 +20,11 @@ TARGET          = $$qtLibraryTarget(kaplugin)
 EXAMPLE_FILES = georgianplugin.json
 
 # generate database for presage:
-PLUGIN_INSTALL_PATH = $${LOMIRI_KEYBOARD_LIB_DIR}/ka/
+PLUGIN_INSTALL_PATH = $${LOMIRI_KEYBOARD_PLUGIN_DIR}/ka/
+
+target.path = $${PLUGIN_INSTALL_PATH}
+
+INSTALLS += target
 
 OTHER_FILES += \
     georgianplugin.json \
