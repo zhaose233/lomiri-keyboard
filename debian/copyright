@@ -84,6 +84,22 @@ Files: plugins/bn/src/free_ebooks/*.txt
 Copyright: Wikisource Contributors (https://bn.wikisource.org/)
 License: CC-BY-SA-4.0
 
+Files: plugins/bn-avro/src/libengine/AutoCorrect.*
+       plugins/bn-avro/src/libengine/FileSystem.*
+       plugins/bn-avro/src/libengine/BengaliChars.h
+       plugins/bn-avro/src/libengine/qlevenshtein.hpp
+       plugins/bn-avro/src/libengine/Log.h
+       plugins/bn-avro/src/data/*.json
+Copyright: 2015-2018 Muhammad Mominul Huque <mominul2082@gmail.com>
+License: GPL-3.0+
+
+Files: plugins/bn-avro/src/libengine/Database.*
+       plugins/bn-avro/src/libengine/regexparser.*
+       plugins/bn-avro/src/libengine/phoneticparser.*
+       plugins/bn-avro/src/libengine/PhoneticSuggestion.*
+Copyright: 2015-2018 Muhammad Mominul Huque <mominul2082@gmail.com>
+License: MPL-2.0 or GPL-3.0
+
 License: LGPL-3
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -146,3 +162,22 @@ License: CC-BY-SA-4.0
  .
  You should have received a copy of the license along with this
  work.  If not, see <https://creativecommons.org/licenses/by-sa/4.0>.
+
+License: GPL-3.0+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+License: MPL-2.0
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, v. 2.0. If a copy of the MPL was not distributed with this
+ file, You can obtain one at http://mozilla.org/MPL/2.0/.
