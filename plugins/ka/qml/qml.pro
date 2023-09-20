@@ -7,7 +7,7 @@ TARGET = dummy
 TEMPLATE = lib
 
 lang_ka.path = "$$LOMIRI_KEYBOARD_PLUGIN_DIR/ka/"
-lang_ka.files = *.qml *.js
+lang_ka.files = *.qml
 
 INSTALLS += lang_ka
 

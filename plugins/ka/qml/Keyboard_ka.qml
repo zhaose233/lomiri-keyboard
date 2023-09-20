@@ -32,31 +32,31 @@ KeyPad {
             anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 0
 
-            CharKey { label: "ქ"; shifted: "Q"; extended: ["1"]; extendedShifted: ["1"]; leftSide: true; }
+            CharKey { label: "ქ"; shifted: "ქ"; extended: ["1"]; extendedShifted: ["1"]; leftSide: true; }
             CharKey { label: "წ"; shifted: "ჭ"; extended: ["2"]; extendedShifted: ["2"] }
-            CharKey { label: "ე"; shifted: "E"; extended: ["3"]; extendedShifted: ["3"] }
+            CharKey { label: "ე"; shifted: "ე"; extended: ["3"]; extendedShifted: ["3"] }
             CharKey { label: "რ"; shifted: "ღ"; extended: ["4"]; extendedShifted: ["4"] }
             CharKey { label: "ტ"; shifted: "თ"; extended: ["5"]; extendedShifted: ["5"] }
-            CharKey { label: "ყ"; shifted: "Y"; extended: ["6"]; extendedShifted: ["6"] }
-            CharKey { label: "უ"; shifted: "U"; extended: ["7"]; extendedShifted: ["7"] }
-            CharKey { label: "ი"; shifted: "I"; extended: ["8"]; extendedShifted: ["8"] }
-            CharKey { label: "ო"; shifted: "O"; extended: ["9"]; extendedShifted: ["9"] }
-            CharKey { label: "პ"; shifted: "P"; extended: ["0"]; extendedShifted: ["0"]; rightSide: true; }
+            CharKey { label: "ყ"; shifted: "ყ"; extended: ["6"]; extendedShifted: ["6"] }
+            CharKey { label: "უ"; shifted: "უ"; extended: ["7"]; extendedShifted: ["7"] }
+            CharKey { label: "ი"; shifted: "ი"; extended: ["8"]; extendedShifted: ["8"] }
+            CharKey { label: "ო"; shifted: "ო"; extended: ["9"]; extendedShifted: ["9"] }
+            CharKey { label: "პ"; shifted: "პ"; extended: ["0"]; extendedShifted: ["0"]; rightSide: true; }
         }
 
         Row {
             anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 0
 
-            CharKey { label: "ა"; shifted: "A"; leftSide: true; }
+            CharKey { label: "ა"; shifted: "ა"; leftSide: true; }
             CharKey { label: "ს"; shifted: "შ"; extended: ["$"]; extendedShifted: ["$"] }
-            CharKey { label: "დ"; shifted: "D"; }
-            CharKey { label: "ფ"; shifted: "F"; }
-            CharKey { label: "გ"; shifted: "G"; }
-            CharKey { label: "ჰ"; shifted: "H"; }
+            CharKey { label: "დ"; shifted: "დ"; }
+            CharKey { label: "ფ"; shifted: "ფ"; }
+            CharKey { label: "გ"; shifted: "გ"; }
+            CharKey { label: "ჰ"; shifted: "ჰ"; }
             CharKey { label: "ჯ"; shifted: "ჟ"; }
-            CharKey { label: "კ"; shifted: "K"; }
-            CharKey { label: "ლ"; shifted: "L"; extended: ["₾"]; rightSide: true; }
+            CharKey { label: "კ"; shifted: "კ"; }
+            CharKey { label: "ლ"; shifted: "ლ"; extended: ["₾"]; rightSide: true; }
         }
 
         Row {
@@ -65,12 +65,12 @@ KeyPad {
 
             ShiftKey {}
             CharKey { label: "ზ"; shifted: "ძ"; }
-            CharKey { label: "ხ"; shifted: "X"; }
+            CharKey { label: "ხ"; shifted: "ხ"; }
             CharKey { label: "ც"; shifted: "ჩ"; }
-            CharKey { label: "ვ"; shifted: "V"; }
-            CharKey { label: "ბ"; shifted: "B"; }
-            CharKey { label: "ნ"; shifted: "N"; }
-            CharKey { label: "მ"; shifted: "M"; }
+            CharKey { label: "ვ"; shifted: "ვ"; }
+            CharKey { label: "ბ"; shifted: "ბ"; }
+            CharKey { label: "ნ"; shifted: "ნ"; }
+            CharKey { label: "მ"; shifted: "მ"; }
             BackspaceKey {}
         }
 
