@@ -22,6 +22,12 @@ EXAMPLE_FILES = georgianplugin.json
 # generate database for presage:
 PLUGIN_INSTALL_PATH = $${LOMIRI_KEYBOARD_PLUGIN_DIR}/ka/
 
+database_ka_install.commands += \
+  rm -f $$PWD/database_ka.db && \
+  text2ngram -n 1 -l -f sqlite -o $$PWD/database_ka.db $$PWD/*.txt && \
+  text2ngram -n 2 -l -f sqlite -o $$PWD/database_ka.db $$PWD/*.txt && \
+  text2ngram -n 3 -l -f sqlite -o $$PWD/database_ka.db $$PWD/*.txt
+
 database_ka_install.files = $${PWD}/database_ka.db
 database_ka_install.path = $${PLUGIN_INSTALL_PATH}
 

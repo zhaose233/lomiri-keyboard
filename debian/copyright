@@ -100,6 +100,11 @@ Files: plugins/bn-avro/src/libengine/Database.*
 Copyright: 2015-2018 Muhammad Mominul Huque <mominul2082@gmail.com>
 License: MPL-2.0 or GPL-3.0
 
+Files: plugins/ka/src/ატილა.txt
+       plugins/ka/src/დომიციანე.txt
+Copyright: Wikipedia Contributors (https://ka.wikipedia.org/)
+License: CC-BY-SA-4.0
+
 License: LGPL-3
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
