@@ -19,20 +19,8 @@ TARGET          = $$qtLibraryTarget(bn-probhatplugin)
 
 PLUGIN_INSTALL_PATH = $${LOMIRI_KEYBOARD_PLUGIN_DIR}/bn-probhat/
 
-# install database for presage:
-lang_bn_db_install.commands += \
-  rm -f $$PWD/database_bn_probhat.db && \
-  text2ngram -n 1 -l -f sqlite -o $$PWD/database_bn_probhat.db $$PWD/free_ebooks/*.txt && \
-  text2ngram -n 2 -l -f sqlite -o $$PWD/database_bn_probhat.db $$PWD/free_ebooks/*.txt && \
-  text2ngram -n 3 -l -f sqlite -o $$PWD/database_bn_probhat.db $$PWD/free_ebooks/*.txt
-
-lang_bn_db_install.path = $$PLUGIN_INSTALL_PATH
-lang_bn_db_install.files = $$PWD/database_bn_probhat.db
-
 target.path = $$PLUGIN_INSTALL_PATH
-INSTALLS += \
-	target \
-	lang_bn_db_install
+INSTALLS += target
 
 EXAMPLE_FILES = bengaliplugin.json
 
