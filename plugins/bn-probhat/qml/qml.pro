@@ -8,13 +8,9 @@ TEMPLATE = lib
 
 lang_bn-probhat.path = "$$LOMIRI_KEYBOARD_PLUGIN_DIR/bn-probhat/"
 lang_bn-probhat.files = *.qml *.js
+lang_bn-probhat.extra = ln -s ../bn/keys $(INSTALL_ROOT)/$$LOMIRI_KEYBOARD_PLUGIN_DIR/bn-probhat/
 
-lang_bn-probhat_keys.path = "$$LOMIRI_KEYBOARD_PLUGIN_DIR/bn-probhat/keys"
-lang_bn-probhat_keys.files = keys/*.qml keys/*.js
-
-INSTALLS += \
-	lang_bn-probhat \
-	lang_bn-probhat_keys
+INSTALLS += lang_bn-probhat
 
 # for QtCreator
 OTHER_FILES += \

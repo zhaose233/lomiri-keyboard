@@ -181,6 +181,7 @@ Description: Lomiri on-screen keyboard data files - Bengali Avro Phonetic
 Package: lomiri-keyboard-bengali-probhat
 Architecture: any
 Depends: lomiri-keyboard (= ${binary:Version}),
+         lomiri-keyboard-bengali (= ${binary:Version}),
          hunspell-bn,
          ${misc:Depends},
          ${shlibs:Depends},
