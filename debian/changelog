@@ -1,7 +1,11 @@
-lomiri-keyboard (1.0) UNRELEASED; urgency=medium
+lomiri-keyboard (1.0) unstable; urgency=medium
 
 
- -- Ratchanan Srirattanamet <ratchanan@ubports.com>  Mon, 05 Jul 2021 15:21:20 +0700
+  [ UBports developers ]
+  * Upstream-provided Debian package for lomiri-keyboard. See upstream
+    ChangeLog for recent changes.
+
+ -- UBports developers <developers@ubports.com>  Sun, 15 Oct 2023 01:20:18 +0200
 
 ubuntu-keyboard (0.100+15.04+ubports) xenial; urgency=medium
 
