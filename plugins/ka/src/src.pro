@@ -40,7 +40,9 @@ INSTALLS += \
 OTHER_FILES += \
     georgianplugin.json \
 
-LIBS += $${TOP_BUILDDIR}/plugins/plugins/libwesternsupport.a -lpresage -lhunspell
+CONFIG += link_pkgconfig
+PKGCONFIG += hunspell
+LIBS += $${TOP_BUILDDIR}/plugins/plugins/libwesternsupport.a -lpresage
 
 INCLUDEPATH += $$PWD/../../westernsupport
 DEPENDPATH += $$PWD/../../westernsupport
