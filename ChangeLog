@@ -1,6 +1,70 @@
+2024-01-28 Mike Gabriel
+
+        * Release 1.0.1 (HEAD -> main, tag: 1.0.1)
+
+2023-12-27 Weblate
+
+        * Added translation using Weblate (Chinese (Simplified)
+          (zh_LATN@pinyin)) (3f9770dc)
+        * Added translation using Weblate (Tamil (Sri Lanka)) (23907a45)
+        * Added translation using Weblate (German (Walser)) (7a4c8602)
+        * Added translation using Weblate (Meadow Mari) (cd5313de)
+        * Added translation using Weblate (Crimean Tatar) (ced1c219)
+        * Added translation using Weblate (Chuvash) (a07fd44b)
+        * Added translation using Weblate (Silesian) (185f1bce)
+        * Added translation using Weblate (Latin) (b388eef6)
+        * Added translation using Weblate (Venetian) (f85e33b6)
+        * Added translation using Weblate (Ossetian) (231c6a3c)
+        * Added translation using Weblate (Sami (Northern)) (fe643fc1)
+        * Added translation using Weblate (Greenlandic) (633ecef7)
+        * Added translation using Weblate (Assamese) (6801dbcf)
+        * Added translation using Weblate (Haitian) (3d3743e9)
+        * Added translation using Weblate (Cornish) (bec01a32)
+        * Added translation using Weblate (Frisian) (15037a81)
+        * Added translation using Weblate (Kashubian) (2c326eca)
+        * Added translation using Weblate (Aragonese) (cbc1e512)
+        * Added translation using Weblate (Tibetan) (bbe646e7)
+        * Added translation using Weblate (Filipino) (6c350bc5)
+        * Added translation using Weblate (Tigrinya) (32ea4a8f)
+        * Added translation using Weblate (Tatar) (f2afe16c)
+
+2023-12-26 Weblate
+
+        * Added translation using Weblate (Italian (it_CARES)) (fb7b7518)
+
+2023-11-29 bittin1ddc447d824349b2
+
+        * Translated using Weblate (Swedish) (f8cab8c6)
+
+2023-12-04 Reza Almanda
+
+        * Translated using Weblate (Indonesian) (d204a52e)
+
+2023-11-16 Ratchanan Srirattanamet
+
+        * Merge branch 'bengali-pkgconfig' into 'main' (4cfb9b9e)
+
+2023-10-14 Luca Weiss
+
+        * Use pkg-config to link to hunspell in Bengali plugins (46d67be2)
+
+2023-10-18 Weblate
+
+        * Added translation using Weblate (Xhosa) (cb7fe85d)
+        * Added translation using Weblate (Manx) (72d58c36)
+        * Added translation using Weblate (Corsican) (16becaa7)
+        * Added translation using Weblate (Chechen) (f22e667f)
+        * Added translation using Weblate (Wolof) (e5d011ab)
+        * Added translation using Weblate (Uzbek) (7c56173e)
+        * Added translation using Weblate (Kyrgyz) (59da45d0)
+        * Added translation using Weblate (Sotho (Southern)) (b56bd5ca)
+        * Added translation using Weblate (Norwegian Nynorsk) (4713d148)
+        * Added translation using Weblate (Odia) (dd3304cd)
+        * Added translation using Weblate (Irish) (d99f35ef)
+
 2023-10-15 Mike Gabriel
 
-        * Release 1.0 (HEAD -> main, tag: 1.0)
+        * Release 1.0 (780210a3) (tag: 1.0)
 
 2023-10-03 Mike Gabriel
 
