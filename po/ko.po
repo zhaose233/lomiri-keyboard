@@ -8,55 +8,57 @@ msgstr ""
 "Project-Id-Version: lomiri-keyboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-18 19:28+0000\n"
-"PO-Revision-Date: 2015-02-09 10:46+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Korean <ko@li.org>\n"
+"PO-Revision-Date: 2024-02-11 17:32+0000\n"
+"Last-Translator: ancalina <yuntk2008@gmail.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-keyboard/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.4-dev\n"
 "X-Launchpad-Export-Date: 2017-04-07 06:31+0000\n"
-"X-Generator: Launchpad (build 18343)\n"
 
 #: ../qml/ActionsToolbar.qml:56
 msgid "Select All"
-msgstr ""
+msgstr "모두 선택"
 
 #: ../qml/ActionsToolbar.qml:57
 msgid "Redo"
-msgstr ""
+msgstr "다시 실행"
 
 #: ../qml/ActionsToolbar.qml:58
 msgid "Undo"
-msgstr ""
+msgstr "실행 취소"
 
 #: ../qml/ActionsToolbar.qml:73
 msgid "Paste"
-msgstr ""
+msgstr "붙혀넣기"
 
 #: ../qml/ActionsToolbar.qml:74
 msgid "Copy"
-msgstr ""
+msgstr "복사"
 
 #: ../qml/ActionsToolbar.qml:75
 msgid "Cut"
-msgstr ""
+msgstr "잘라내기"
 
 #: ../qml/FloatingActions.qml:62
 msgid "Done"
-msgstr ""
+msgstr "완료"
 
 #: ../qml/Keyboard.qml:351
 msgid "Swipe to move selection"
-msgstr ""
+msgstr "스와이프하여 선택 이동"
 
 #: ../qml/Keyboard.qml:352
 msgid "Swipe to move cursor"
-msgstr ""
+msgstr "스와이프하여 커서 이동"
 
 #: ../qml/Keyboard.qml:352
 msgid "Double-tap to enter selection mode"
-msgstr ""
+msgstr "두번 탭해 선택모드 켜기"
 
 #: ../qml/keys/LanguageMenu.qml:106
 msgid "Settings"
@@ -71,10 +73,8 @@ msgid "Azerbaijani"
 msgstr "아제르바이잔어"
 
 #: ../qml/keys/languages.js:21
-#, fuzzy
-#| msgid "Hungarian"
 msgid "Bulgarian"
-msgstr "헝가리어"
+msgstr "불가리아어"
 
 #: ../qml/keys/languages.js:22
 msgid "Bosnian"
@@ -110,7 +110,7 @@ msgstr "영어"
 
 #: ../qml/keys/languages.js:30
 msgid "Esperanto"
-msgstr ""
+msgstr "에스페란토어"
 
 #: ../qml/keys/languages.js:31
 msgid "Spanish"
@@ -118,7 +118,7 @@ msgstr "스페인어"
 
 #: ../qml/keys/languages.js:32
 msgid "Persian"
-msgstr ""
+msgstr "페르시아어"
 
 #: ../qml/keys/languages.js:33
 msgid "Finnish"
@@ -129,12 +129,12 @@ msgid "French"
 msgstr "프랑스어"
 
 #: ../qml/keys/languages.js:35
-#, fuzzy
-#| msgid "French"
 msgid ""
 "French\n"
 "(Swiss)"
-msgstr "프랑스어"
+msgstr ""
+"프랑스어\n"
+"(스위스)"
 
 #: ../qml/keys/languages.js:36
 msgid "Scottish Gaelic"
@@ -162,11 +162,11 @@ msgstr "이탈리아어"
 
 #: ../qml/keys/languages.js:42
 msgid "Japanese"
-msgstr "일본"
+msgstr "일본어"
 
 #: ../qml/keys/languages.js:43
 msgid "Lithuanian"
-msgstr ""
+msgstr "리투아니아어"
 
 #: ../qml/keys/languages.js:44
 msgid "Latvian"
@@ -174,7 +174,7 @@ msgstr "라트비아어"
 
 #: ../qml/keys/languages.js:45
 msgid "Korean"
-msgstr ""
+msgstr "한국어"
 
 #: ../qml/keys/languages.js:46
 msgid "Dutch"
@@ -214,7 +214,7 @@ msgstr "스웨덴어"
 
 #: ../qml/keys/languages.js:55
 msgid "Turkish"
-msgstr ""
+msgstr "터키어"
 
 #: ../qml/keys/languages.js:56
 msgid "Ukrainian"
@@ -224,13 +224,17 @@ msgstr "우크라이나어"
 msgid ""
 "Chinese\n"
 "(Pinyin)"
-msgstr "중국어(간체)"
+msgstr ""
+"중국어\n"
+"(간체)"
 
 #: ../qml/keys/languages.js:58
 msgid ""
 "Chinese\n"
 "(Chewing)"
-msgstr "중국어(번체)"
+msgstr ""
+"중국어\n"
+"(번체)"
 
 #~ msgid "Language: "
 #~ msgstr "언어: "
