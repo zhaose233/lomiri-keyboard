@@ -8,29 +8,29 @@ msgstr ""
 "Project-Id-Version: lomiri-keyboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-18 19:28+0000\n"
-"PO-Revision-Date: 2020-12-17 14:32+0000\n"
-"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
-"Language-Team: Greek <https://translate.ubports.com/projects/ubports/"
-"keyboard-component/el/>\n"
+"PO-Revision-Date: 2024-03-11 08:26+0000\n"
+"Last-Translator: Giannis Vassilopoulos <jv23040320@gmail.com>\n"
+"Language-Team: Greek <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-keyboard/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11.3\n"
+"X-Generator: Weblate 5.5-dev\n"
 "X-Launchpad-Export-Date: 2017-04-07 06:31+0000\n"
 
 #: ../qml/ActionsToolbar.qml:56
 msgid "Select All"
-msgstr ""
+msgstr "Επιλογή όλων"
 
 #: ../qml/ActionsToolbar.qml:57
 msgid "Redo"
-msgstr ""
+msgstr "Επανάληψη"
 
 #: ../qml/ActionsToolbar.qml:58
 msgid "Undo"
-msgstr ""
+msgstr "Αναίρεση"
 
 #: ../qml/ActionsToolbar.qml:73
 msgid "Paste"
@@ -38,7 +38,7 @@ msgstr ""
 
 #: ../qml/ActionsToolbar.qml:74
 msgid "Copy"
-msgstr ""
+msgstr "Αντιγραφή"
 
 #: ../qml/ActionsToolbar.qml:75
 msgid "Cut"
