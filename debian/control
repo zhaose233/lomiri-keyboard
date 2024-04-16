@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: UBports Developers <developers@ubports.com>
 XSBC-Original-Maintainer: Michael Hasselmann <michaelh@openismus.com>
 Build-Depends: debhelper-compat (= 12),
-               dh-migrations,
+               dh-migrations | hello,
                dh-python,
                doxygen,
                libanthy-dev,
@@ -27,6 +27,7 @@ Build-Depends: debhelper-compat (= 12),
                qtdeclarative5-private-dev,
                qml-module-qtmultimedia,
                qml-module-lomiri-components,
+               xauth,
                xvfb,
                presage,
 Standards-Version: 3.9.5
