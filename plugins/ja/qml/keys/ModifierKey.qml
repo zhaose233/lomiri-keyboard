@@ -20,7 +20,7 @@ import Lomiri.Components 1.3
 import Lomiri.Components.Popups 1.3
 
 import "modifier.js" as Modifier
-import "key_constants.js" as UI
+import keys 1.0
 
 FlickCharKey {
     label: (isPreedit && layoutState == "kana") ? " ゛ ゜" : "␣"
