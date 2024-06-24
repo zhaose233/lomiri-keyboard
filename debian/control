@@ -232,7 +232,7 @@ Description: Lomiri on-screen keyboard data files - Chinese Pinyin
 Package: lomiri-keyboard-croatian
 Architecture: any
 Depends: lomiri-keyboard (= ${binary:Version}),
-	 myspell-hr
+	 hunspell-hr
          ${misc:Depends},
          ${shlibs:Depends},
 Description: Lomiri on-screen keyboard data files - Croatian
