@@ -1,6 +1,74 @@
+2024-10-11 Mike Gabriel
+
+        * Release 1.0.2 (HEAD -> main, tag: 1.0.2)
+
+2024-08-11 umesaburo sagawa
+
+        * Translated using Weblate (Japanese) (0e05b944)
+
+2024-07-22 Jiri Grönroos
+
+        * Translated using Weblate (Finnish) (5d2fece3)
+
+2024-06-24 Mike Gabriel
+
+        * Merge branch 'personal/peat-psuwit/hunspell-hr' into 'main'
+          (8a76848e)
+
+2024-06-24 Ratchanan Srirattanamet
+
+        * d/control: migrate myspell-hr -> hunspell-hr (37ed51f8)
+
+2024-06-20 Mike Gabriel
+
+        * Merge branch 'personal/lduboeuf/default_settings_change' into
+          'main' (495d35e0)
+
+2024-06-14 Lionel Duboeuf
+
+        * makes Auto-capitalization, Auto-completion, Keyboard vibration,
+          Auto punctation opt-in fixes
+          https://gitlab.com/ubports/development/core/lomiri-keyboard/-/issues/207
+          (b0da4e46)
+
+2024-05-28 Ali Beyaz
+
+        * Translated using Weblate (Turkish) (7e79f10f)
+
+2024-05-04 phlostically
+
+        * Translated using Weblate (Esperanto) (105d9b1e)
+
+2024-04-16 Mike Gabriel
+
+        * Merge branch 'personal/peat-psuwit/build-against-noble' into 'main'
+          (d4c92203)
+
+2024-04-16 Ratchanan Srirattanamet
+
+        * debian/{control, rules}: make packaging also builds on Debian
+          testing (42a050b7)
+        * debian/lomiri-keyboard.install: update for new Maliit plugin
+          location (ecff4896)
+        * tests/: fix compiling test on newer Maliit (4ef3bab3)
+        * debian/{control, rules}: fix dependencies on Ubuntu Noble
+          (51131e06)
+
+2024-03-06 Giannis Vassilopoulos
+
+        * Translated using Weblate (Greek) (1cfb0a51)
+
+2024-02-11 ancalina
+
+        * Translated using Weblate (Korean) (7d73180b)
+
+2024-01-28 ButterflyOfFire
+
+        * Translated using Weblate (Kabyle) (da200ff1)
+
 2024-01-28 Mike Gabriel
 
-        * Release 1.0.1 (HEAD -> main, tag: 1.0.1)
+        * Release 1.0.1 (c4e3f6b6) (tag: 1.0.1)
 
 2023-12-27 Weblate
 
