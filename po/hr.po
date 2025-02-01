@@ -8,55 +8,58 @@ msgstr ""
 "Project-Id-Version: lomiri-keyboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-18 19:28+0000\n"
-"PO-Revision-Date: 2015-02-15 14:22+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Croatian <hr@li.org>\n"
+"PO-Revision-Date: 2025-02-04 07:51+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/lomiri/"
+"lomiri-keyboard/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.10-dev\n"
 "X-Launchpad-Export-Date: 2017-04-07 06:31+0000\n"
-"X-Generator: Launchpad (build 18343)\n"
 
 #: ../qml/ActionsToolbar.qml:56
 msgid "Select All"
-msgstr ""
+msgstr "Odaberi sve"
 
 #: ../qml/ActionsToolbar.qml:57
 msgid "Redo"
-msgstr ""
+msgstr "Ponovi"
 
 #: ../qml/ActionsToolbar.qml:58
 msgid "Undo"
-msgstr ""
+msgstr "Poništi"
 
 #: ../qml/ActionsToolbar.qml:73
 msgid "Paste"
-msgstr ""
+msgstr "Zalijepi"
 
 #: ../qml/ActionsToolbar.qml:74
 msgid "Copy"
-msgstr ""
+msgstr "Kopiraj"
 
 #: ../qml/ActionsToolbar.qml:75
 msgid "Cut"
-msgstr ""
+msgstr "Izreži"
 
 #: ../qml/FloatingActions.qml:62
 msgid "Done"
-msgstr ""
+msgstr "Gotovo"
 
 #: ../qml/Keyboard.qml:351
 msgid "Swipe to move selection"
-msgstr ""
+msgstr "Povuci za pomicanje odabira"
 
 #: ../qml/Keyboard.qml:352
 msgid "Swipe to move cursor"
-msgstr ""
+msgstr "Povuci za pomicanje kursora"
 
 #: ../qml/Keyboard.qml:352
 msgid "Double-tap to enter selection mode"
-msgstr ""
+msgstr "Dodirni dvaput za ulaz u način odabiranja"
 
 #: ../qml/keys/LanguageMenu.qml:106
 msgid "Settings"
@@ -71,10 +74,8 @@ msgid "Azerbaijani"
 msgstr "Azerbejdžanski"
 
 #: ../qml/keys/languages.js:21
-#, fuzzy
-#| msgid "Hungarian"
 msgid "Bulgarian"
-msgstr "Mađarski"
+msgstr "Bugarski"
 
 #: ../qml/keys/languages.js:22
 msgid "Bosnian"
@@ -98,7 +99,7 @@ msgstr "Njemački"
 
 #: ../qml/keys/languages.js:27
 msgid "Emoji"
-msgstr "Smajliji"
+msgstr "Emoji"
 
 #: ../qml/keys/languages.js:28
 msgid "Greek"
@@ -110,7 +111,7 @@ msgstr "Engleski"
 
 #: ../qml/keys/languages.js:30
 msgid "Esperanto"
-msgstr ""
+msgstr "Esperanto"
 
 #: ../qml/keys/languages.js:31
 msgid "Spanish"
@@ -118,7 +119,7 @@ msgstr "Španjolski"
 
 #: ../qml/keys/languages.js:32
 msgid "Persian"
-msgstr ""
+msgstr "Perzijski"
 
 #: ../qml/keys/languages.js:33
 msgid "Finnish"
@@ -129,12 +130,12 @@ msgid "French"
 msgstr "Francuski"
 
 #: ../qml/keys/languages.js:35
-#, fuzzy
-#| msgid "French"
 msgid ""
 "French\n"
 "(Swiss)"
-msgstr "Francuski"
+msgstr ""
+"Francuski\n"
+"(Švicarska)"
 
 #: ../qml/keys/languages.js:36
 msgid "Scottish Gaelic"
@@ -166,7 +167,7 @@ msgstr "Japanski"
 
 #: ../qml/keys/languages.js:43
 msgid "Lithuanian"
-msgstr ""
+msgstr "Litvanski"
 
 #: ../qml/keys/languages.js:44
 msgid "Latvian"
@@ -174,7 +175,7 @@ msgstr "Letonski"
 
 #: ../qml/keys/languages.js:45
 msgid "Korean"
-msgstr ""
+msgstr "Korejski"
 
 #: ../qml/keys/languages.js:46
 msgid "Dutch"
@@ -214,7 +215,7 @@ msgstr "Švedski"
 
 #: ../qml/keys/languages.js:55
 msgid "Turkish"
-msgstr ""
+msgstr "Turski"
 
 #: ../qml/keys/languages.js:56
 msgid "Ukrainian"
