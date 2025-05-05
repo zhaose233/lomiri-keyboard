@@ -1,3 +1,10 @@
+lomiri-keyboard (1.0.3) unstable; urgency=medium
+
+  * Upstream-provided Debian package for lomiri-keyboard. See upstream
+    ChangeLog for recent changes.
+
+ -- UBports developers <developers@ubports.com>  Mon, 05 May 2025 09:58:09 +0200
+
 lomiri-keyboard (1.0.2) unstable; urgency=medium
 
   * Upstream-provided Debian package for lomiri-keyboard. See upstream

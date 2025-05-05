@@ -1,6 +1,44 @@
+2025-05-05 Mike Gabriel
+
+        * Release 1.0.3 (HEAD -> main, tag: 1.0.3)
+
+2025-04-16 Ratchanan Srirattanamet
+
+        * Merge branch 'personal/fredldotme/encryption' into 'main'
+          (c0062b0c)
+
+2025-04-16 Alfred Neumayer
+
+        * debian: Set RestartSec=1s to avoid hitting rate limit (8f4c0432)
+
+2025-04-03 Valery Levanchuk
+
+        * Translated using Weblate (Belarusian) (e7b45a9f)
+
+2025-03-21 Ratchanan Srirattanamet
+
+        * Merge branch 'personal/fredldotme/keyboard-heights-adjust' into
+          'main' (8b5c1ead)
+
+2025-03-20 Alfred Neumayer
+
+        * qml/keys: Adjust key height constants (2df841a7)
+
+2025-03-13 Niko
+
+        * Translated using Weblate (Serbian) (fd797eab)
+
+2025-02-01 Milo Ivir
+
+        * Translated using Weblate (Croatian) (d64b74d7)
+
+2024-12-27 Hosted Weblate
+
+        * Update translation files (08ca4c73)
+
 2024-10-11 Mike Gabriel
 
-        * Release 1.0.2 (HEAD -> main, tag: 1.0.2)
+        * Release 1.0.2 (6876f5de) (tag: 1.0.2)
 
 2024-08-11 umesaburo sagawa
 
