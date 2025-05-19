@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: lomiri-keyboard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-18 19:28+0000\n"
-"PO-Revision-Date: 2025-05-10 18:00+0000\n"
+"PO-Revision-Date: 2025-05-19 11:58+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/lomiri/"
 "lomiri-keyboard/et/>\n"
@@ -46,7 +46,7 @@ msgstr "Lõika"
 
 #: ../qml/FloatingActions.qml:62
 msgid "Done"
-msgstr "Valmis"
+msgstr "Tehtud"
 
 #: ../qml/Keyboard.qml:351
 msgid "Swipe to move selection"
