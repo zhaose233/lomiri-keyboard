@@ -42,6 +42,10 @@ Item {
 
     property alias acceptDoubleClick: keyMouseArea.acceptDoubleClick
     property alias horizontalSwipe: keyMouseArea.horizontalSwipe
+    property alias enabled: keyMouseArea.enabled
+    property alias pressTimeout: pressTimer.interval
+    property int annotationXOffset: 0
+    property int annotationYOffset: 0
 
     property string action
     property bool noMagnifier: false
@@ -116,17 +120,15 @@ Item {
     signal doubleClicked()
     signal keySent(string key)
 
-    Component.onCompleted: {
-        if (annotation) {
-            __annotationLabelNormal = annotation
-            __annotationLabelShifted = annotation
-        } else {
-            if (extended)
-                __annotationLabelNormal = extended[0]
-            if (extendedShifted)
-                __annotationLabelShifted = extendedShifted[0]
-        }
+    function setAnnotationLabel() {
+        __annotationLabelNormal = annotation || (extended ? extended[0] : "");
+        __annotationLabelShifted = annotation || (extendedShifted ? extendedShifted[0] : "");
     }
+
+    Component.onCompleted: setAnnotationLabel()
+    onExtendedChanged: setAnnotationLabel()
+    onExtendedShiftedChanged: setAnnotationLabel()
+    onAnnotationChanged: setAnnotationLabel()
 
     // Make it possible for the visible area of the key to differ from the
     // actual key size. This allows us to extend the touch area of the bottom
@@ -183,6 +185,10 @@ Item {
                 anchors.top: parent.top
                 anchors.topMargin: units.gu(UI.annotationTopMargin)
                 anchors.rightMargin: units.gu(UI.annotationRightMargin)
+                transform: Translate {
+                    x: annotationXOffset
+                    y: annotationYOffset
+                }
                 font.family: UI.annotationFont
                 font.pixelSize: fontSize / 3
                 font.weight: Font.Light
@@ -196,6 +202,8 @@ Item {
     PressArea {
         id: keyMouseArea
         anchors.fill: parent
+
+        onEnabledChanged: keyMouseArea.cancelPress()
 
         onPressAndHold: {
             if (overridePressArea) {
@@ -228,50 +236,14 @@ Item {
         }
 
         onReleased: {
+            pressTimer.stop();
+            if (!swipedOut && !pressTimer.hasTriggered) {
+                pressTimer.onTriggered();
+            } else {
+                pressTimer.hasTriggered = true;
+            }
             key.released();
-            if (overridePressArea) {
-                return;
-            }
-            if (extendedKeysShown) {
-                if (currentExtendedKey) {
-                    currentExtendedKey.commit();
-                    currentExtendedKey = null;
-                } else {
-                    extendedKeysSelector.closePopover();
-                }
-            } else if(!swipedOut) {
-                // Read this prior to altering autocaps
-                var keyToSend = valueToSubmit;
-                if (magnifier.currentlyAssignedKey == key) {
-                    magnifier.shown = false;
-                }
-
-                if (panel.autoCapsTriggered && action != "backspace") {
-                    panel.autoCapsTriggered = false;
-                }
-                else if (!skipAutoCaps) {
-                    if (panel.activeKeypadState === "SHIFTED" && panel.state === "CHARACTERS")
-                        panel.activeKeypadState = "NORMAL";
-                }
-                if (switchBackFromSymbols && panel.state === "SYMBOLS") {
-                    panel.state = "CHARACTERS";
-                }
-
-                if (allowPreeditHandler && preeditHandler) {
-                    preeditHandler.onKeyReleased(keyToSend, action);
-                    return;
-                }
-
-                event_handler.onKeyReleased(keyToSend, action);
-                keySent(keyToSend);
-            } else if (action == "backspace") {
-                // Send release from backspace if we're swiped out since
-                // backspace activates on press and deactivates on release
-                // to allow for repeated backspaces, unlike normal keys
-                // which activate on release.
-                event_handler.onKeyReleased(valueToSubmit, action);
-                keySent(valueToSubmit);
-            }
+            releaseTimer.start();
         }
 
         onSwipedOutChanged: {
@@ -282,23 +254,13 @@ Item {
 
         onPressed: {
             key.pressed();
+
             if (overridePressArea) {
                 return;
             }
-            magnifier.currentlyAssignedKey = key
-            magnifier.shown = !noMagnifier && maliit_input_method.enableMagnifier
 
-            if (maliit_input_method.useAudioFeedback)
-                audioFeedback.play();
-
-            if (maliit_input_method.useHapticFeedback)
-                 pressEffect.start();
-
-            // Quick workaround to fix initial autocaps - not beautiful, but works
-            if(action != "backspace") {
-                panel.autoCapsTriggered = false;
-            }
-            event_handler.onKeyPressed(valueToSubmit, action);
+            pressTimer.hasTriggered = false;
+            pressTimer.restart()
         }
 
         onDoubleClicked: {
@@ -342,6 +304,88 @@ Item {
         onTriggered: {
             swipeReady = true;
             keyMouseArea.evaluateSelectorSwipe();
+        }
+    }
+
+    Timer {
+        property bool hasTriggered: true
+        id: pressTimer
+        interval: 0
+        onTriggered: {
+            hasTriggered = true;
+
+            if (!enabled) {
+                return;
+            }
+
+            magnifier.currentlyAssignedKey = key;
+            magnifier.shown = !noMagnifier && maliit_input_method.enableMagnifier
+
+            if (maliit_input_method.useAudioFeedback) {
+                audioFeedback.play();
+            }
+
+            if (maliit_input_method.useHapticFeedback) {
+                pressEffect.start();
+            }
+
+            // Quick workaround to fix initial autocaps - not beautiful, but works
+            if (action !== "backspace") {
+                panel.autoCapsTriggered = false;
+            }
+            event_handler.onKeyPressed(valueToSubmit, action);
+        }
+    }
+
+    Timer {
+        id: releaseTimer
+        interval: pressTimer.interval
+        onTriggered: {
+            if (overridePressArea) {
+                return;
+            }
+
+            if (extendedKeysShown) {
+                if (currentExtendedKey) {
+                    keySent(currentExtendedKey.commitStr);
+                    currentExtendedKey.commit();
+                    currentExtendedKey = null;
+                } else {
+                    extendedKeysSelector.closePopover();
+                }
+            } else if(!keyMouseArea.swipedOut) {
+                // Read this prior to altering autocaps
+                const keyToSend = valueToSubmit;
+                if (magnifier.currentlyAssignedKey == key) {
+                    magnifier.shown = false;
+                }
+
+                if (panel.autoCapsTriggered && action != "backspace") {
+                    panel.autoCapsTriggered = false;
+                }
+                else if (!skipAutoCaps) {
+                    if (panel.activeKeypadState === "SHIFTED" && panel.state === "CHARACTERS")
+                        panel.activeKeypadState = "NORMAL";
+                }
+                if (switchBackFromSymbols && panel.state === "SYMBOLS") {
+                    panel.state = "CHARACTERS";
+                }
+
+                if (allowPreeditHandler && preeditHandler) {
+                    preeditHandler.onKeyReleased(keyToSend, action);
+                    return;
+                }
+
+                event_handler.onKeyReleased(keyToSend, action);
+                keySent(keyToSend);
+            } else if (action == "backspace") {
+                // Send release from backspace if we're swiped out since
+                // backspace activates on press and deactivates on release
+                // to allow for repeated backspaces, unlike normal keys
+                // which activate on release.
+                event_handler.onKeyReleased(valueToSubmit, action);
+                keySent(valueToSubmit);
+            }
         }
     }
 
