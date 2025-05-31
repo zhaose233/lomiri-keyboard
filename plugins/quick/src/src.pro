@@ -27,7 +27,7 @@ TARGET          = $$qtLibraryTarget(zh-hant-quickplugin)
 EXAMPLE_FILES = quickplugin.json
 
 # install
-target.path = $${UBUNTU_KEYBOARD_LIB_DIR}/zh-hant-quick/
+target.path = $${LOMIRI_KEYBOARD_PLUGIN_DIR}/zh-hant-quick/
 INSTALLS += target
 
 OTHER_FILES += \

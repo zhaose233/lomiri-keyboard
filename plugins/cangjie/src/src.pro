@@ -27,7 +27,7 @@ TARGET          = $$qtLibraryTarget(zh-hant-cangjieplugin)
 EXAMPLE_FILES = cangjieplugin.json
 
 # install
-target.path = $${UBUNTU_KEYBOARD_LIB_DIR}/zh-hant-cangjie/
+target.path = $${LOMIRI_KEYBOARD_PLUGIN_DIR}/zh-hant-cangjie/
 INSTALLS += target
 
 OTHER_FILES += \

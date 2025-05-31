@@ -6,7 +6,7 @@ include($${TOP_SRCDIR}/config.pri)
 TARGET = dummy
 TEMPLATE = lib
 
-lang_zh_quick.path = "$${UBUNTU_KEYBOARD_LIB_DIR}/zh-hant-quick/"
+lang_zh_quick.path = "$${LOMIRI_KEYBOARD_PLUGIN_DIR}/zh-hant-quick/"
 lang_zh_quick.files = *.qml *.js *.txt
 
 INSTALLS += lang_zh_quick

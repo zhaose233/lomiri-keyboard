@@ -6,7 +6,7 @@ include($${TOP_SRCDIR}/config.pri)
 TARGET = dummy
 TEMPLATE = lib
 
-lang_zh_cangjie.path = "$${UBUNTU_KEYBOARD_LIB_DIR}/zh-hant-cangjie/"
+lang_zh_cangjie.path = "$${LOMIRI_KEYBOARD_PLUGIN_DIR}/zh-hant-cangjie/"
 lang_zh_cangjie.files = *.qml *.js *.txt
 
 INSTALLS += lang_zh_cangjie
