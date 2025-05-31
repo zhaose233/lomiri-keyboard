@@ -43,7 +43,7 @@ CangjieAdapter::~CangjieAdapter()
 
 void CangjieAdapter::prepareDb()
 {
-    QFile inputFile(QString(LOMIRI_KEYBOARD_DATA_DIR) + QString("/lib/zh-hant-cangjie/cangjie3.txt"));
+    QFile inputFile(QString(LOMIRI_KEYBOARD_PLUGIN_DIR) + QString("/zh-hant-cangjie/cangjie3.txt"));
 
     if (inputFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {

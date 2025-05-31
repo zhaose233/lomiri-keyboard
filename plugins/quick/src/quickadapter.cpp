@@ -43,7 +43,7 @@ QuickAdapter::~QuickAdapter()
 
 void QuickAdapter::prepareDb()
 {
-    QFile inputFile(QString(LOMIRI_KEYBOARD_DATA_DIR) + QString("/lib/zh-hant-quick/quick-classic.txt"));
+    QFile inputFile(QString(LOMIRI_KEYBOARD_PLUGIN_DIR) + QString("/zh-hant-quick/quick-classic.txt"));
 
     if (inputFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
